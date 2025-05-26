@@ -6,47 +6,25 @@ We exclude from this list:
 
 * Some parameters without documentation (we're a large, fast-growing model maintained by a small team- we're working on it!)
 * Abolition parameters, which mirror each household property and allow the user to set the value of the property to zero (these take the format `gov.abolitions.variable_name`) because these roughly triple the size of this list and are repetitive.
-### calibration.uprating.equity_prices
-**Label:** Equity prices
+### household.wealth.land.value.aggregate_household_land_value
+**Label:** Total direct household land value
 
-Equity prices (OBR forecast).
+Total value of land held by households
 
-**Type:** int
+**Type:** float
 
-**Current value:** 4291
-
----
-
-### calibration.programs.fuel_duty.revenue
-**Label:** Fuel duty revenues
-
-Fuel duty revenues.
-
-**Type:** int
-
-**Current value:** 26621382708
+**Current value:** 4157640417657.9434
 
 ---
 
-### calibration.programs.capital_gains.total
-**Label:** Total capital gains
+### household.wealth.land.value.aggregate_corporate_land_value
+**Label:** Total corporate land value
 
-Total capital gains by individuals.
+Total value of land held by (non-financial and financial) corporations
 
-**Type:** int
+**Type:** float
 
-**Current value:** 79881000000
-
----
-
-### calibration.programs.capital_gains.tax
-**Label:** Capital Gains Tax revenue
-
-Capital gains tax revenue.
-
-**Type:** int
-
-**Current value:** 16200000000
+**Current value:** 1696017895849.8547
 
 ---
 
@@ -58,6 +36,37 @@ Financial assets of households.
 **Type:** int
 
 **Current value:** 7300000000000
+
+---
+
+### household.wealth.national_balance_sheet.household.financial_net_worth
+**Label:** Total financial wealth
+
+**Type:** int
+
+**Current value:** 5327153000000
+
+---
+
+### household.wealth.corporate_wealth
+**Label:** Corporate wealth
+
+Total corporate wealth.
+
+**Type:** float
+
+**Current value:** 5204783930665.972
+
+---
+
+### household.wealth.property_wealth
+**Label:** Property wealth
+
+Total property wealth.
+
+**Type:** float
+
+**Current value:** 6180888974325.558
 
 ---
 
@@ -90,7 +99,7 @@ Absolute poverty threshold for equivalised household net income, before housing 
 
 **Type:** float
 
-**Current value:** 367.36108108108107
+**Current value:** 388.27333333333337
 
 ---
 
@@ -101,7 +110,18 @@ Absolute poverty threshold for equivalised household net income, after housing c
 
 **Type:** float
 
-**Current value:** 314.75567567567566
+**Current value:** 332.67333333333335
+
+---
+
+### household.poverty.exclude_non_hbai_income
+**Label:** Follow HBAI for poverty definitions
+
+Whether to exclude non-HBAI income from poverty calculations
+
+**Type:** bool
+
+**Current value:** True
 
 ---
 
@@ -112,7 +132,7 @@ Index of private rental prices across the UK.
 
 **Type:** float
 
-**Current value:** 128.5577828397874
+**Current value:** 129.39559605163248
 
 ---
 
@@ -132,7 +152,7 @@ Retail Price Index (RPI) is a measure of inflation published by the Office for N
 
 **Type:** float
 
-**Current value:** 205.04825538233115
+**Current value:** 206.38455827765404
 
 ---
 
@@ -141,7 +161,7 @@ Retail Price Index (RPI) is a measure of inflation published by the Office for N
 
 **Type:** float
 
-**Current value:** 307.5723830734967
+**Current value:** 309.57683741648106
 
 ---
 
@@ -306,7 +326,7 @@ Mean annual private school fee
 
 **Type:** float
 
-**Current value:** 17210.75043630017
+**Current value:** 16956.661316211877
 
 ---
 
@@ -328,7 +348,7 @@ Most recent September CPIH index value, updated for each uprating occurrence (20
 
 **Type:** float
 
-**Current value:** 153.44444444444443
+**Current value:** 154.44444444444446
 
 ---
 
@@ -936,6 +956,28 @@ Remove all State Pension payments.
 
 ---
 
+### gov.contrib.two_child_limit.age_exemption.child_tax_credit
+**Label:** Child Tax Credit two-child limit age-based exemption
+
+Parents of children under this age are exempt from the two-child limit under the Child Tax Credit.
+
+**Type:** int
+
+**Current value:** 0
+
+---
+
+### gov.contrib.two_child_limit.age_exemption.universal_credit
+**Label:** Universal Credit two-child limit age-based exemption
+
+Parents of children under this age are exempt from the two-child limit under the Universal Credit.
+
+**Type:** int
+
+**Current value:** 0
+
+---
+
 ### gov.dwp.carers_allowance.rate
 **Label:** Carer's Allowance rate
 
@@ -1247,7 +1289,7 @@ This amount of earnings is disreagrded for workers under the Housing Benefit.
 
 **Type:** float
 
-**Current value:** 51.18391608391608
+**Current value:** 51.51748251748252
 
 ---
 
@@ -1258,7 +1300,7 @@ This amount of earnings is disreagrded for couples under the Housing Benefit.
 
 **Type:** float
 
-**Current value:** 13.796203796203795
+**Current value:** 13.886113886113886
 
 ---
 
@@ -1269,7 +1311,7 @@ This amount of earnings is disreagrded for lone parents under the Housing Benefi
 
 **Type:** float
 
-**Current value:** 34.49050949050949
+**Current value:** 34.71528471528472
 
 ---
 
@@ -1280,7 +1322,7 @@ This amount of earnings is disreagrded for single filers under the Housing Benef
 
 **Type:** float
 
-**Current value:** 6.898101898101897
+**Current value:** 6.943056943056943
 
 ---
 
@@ -1313,7 +1355,7 @@ Exceptional rate for Constant Attendance Allowance
 
 **Type:** float
 
-**Current value:** 200.87272727272725
+**Current value:** 202.1818181818182
 
 ---
 
@@ -1324,7 +1366,7 @@ Full day rate for Constant Attendance Allowance
 
 **Type:** float
 
-**Current value:** 100.43636363636362
+**Current value:** 101.0909090909091
 
 ---
 
@@ -1335,7 +1377,7 @@ Part day rate for Constant Attendance Allowance
 
 **Type:** float
 
-**Current value:** 50.21818181818181
+**Current value:** 50.54545454545455
 
 ---
 
@@ -1346,7 +1388,7 @@ Intermediate rate for Constant Attendance Allowance
 
 **Type:** float
 
-**Current value:** 150.65454545454543
+**Current value:** 151.63636363636365
 
 ---
 
@@ -1357,7 +1399,7 @@ Disability premium for a single person
 
 **Type:** float
 
-**Current value:** 48.217732267732266
+**Current value:** 48.531968031968034
 
 ---
 
@@ -1368,7 +1410,7 @@ Severe disability premium for a couple where both are eligible
 
 **Type:** float
 
-**Current value:** 184.73116883116882
+**Current value:** 185.93506493506496
 
 ---
 
@@ -1379,7 +1421,7 @@ Enhanced disability premium for a couple, invalid for Employment and Support All
 
 **Type:** float
 
-**Current value:** 33.80069930069929
+**Current value:** 34.02097902097902
 
 ---
 
@@ -1390,7 +1432,7 @@ Disability premium for a couple
 
 **Type:** float
 
-**Current value:** 68.7050949050949
+**Current value:** 69.15284715284716
 
 ---
 
@@ -1401,7 +1443,7 @@ Severe disability premium for a single person
 
 **Type:** float
 
-**Current value:** 92.36558441558441
+**Current value:** 92.96753246753248
 
 ---
 
@@ -1412,7 +1454,7 @@ Enhanced disability premium for a single person, invalid for Employment and Supp
 
 **Type:** float
 
-**Current value:** 23.591508491508492
+**Current value:** 23.745254745254748
 
 ---
 
@@ -1434,7 +1476,7 @@ Weekly contributory Jobseeker's Allowance for couples
 
 **Type:** float
 
-**Current value:** 134.1653691813804
+**Current value:** 135.03972712680581
 
 ---
 
@@ -1456,7 +1498,7 @@ Income-based Jobseeker's Allowance for persons aged 18-24
 
 **Type:** float
 
-**Current value:** 67.66456661316212
+**Current value:** 68.10553772070627
 
 ---
 
@@ -1478,7 +1520,7 @@ Income-based Jobseeker's Allowance for persons aged over 25
 
 **Type:** float
 
-**Current value:** 85.34269662921349
+**Current value:** 85.8988764044944
 
 ---
 
@@ -1654,7 +1696,7 @@ Non-dependent deduction amount for the housing element of the Universal Credit.
 
 **Type:** float
 
-**Current value:** 93.77881959910913
+**Current value:** 94.3899777282851
 
 ---
 
@@ -1819,7 +1861,7 @@ Child Tax Credit severely disabled child element
 
 **Type:** float
 
-**Current value:** 1584.935794542536
+**Current value:** 1595.2648475120388
 
 ---
 
@@ -1885,7 +1927,7 @@ Working Tax Credit childcare element for one child
 
 **Type:** float
 
-**Current value:** 268.52777777777777
+**Current value:** 270.27777777777777
 
 ---
 
@@ -1918,7 +1960,7 @@ Working Tax Credit childcare element for two or more children
 
 **Type:** float
 
-**Current value:** 460.33333333333326
+**Current value:** 463.33333333333337
 
 ---
 
@@ -1996,6 +2038,28 @@ Weekly amount paid to recipients of the New State Pension.
 **Type:** float
 
 **Current value:** 224.96
+
+---
+
+### gov.dwp.state_pension.triple_lock.minimum_rate
+**Label:** Triple lock minimum rate
+
+The triple lock is set to the highest of earnings growth, CPI inflation, or this rate.
+
+**Type:** float
+
+**Current value:** 0.025
+
+---
+
+### gov.dwp.state_pension.triple_lock.active
+**Label:** Triple lock active
+
+The triple lock is active if this value is true.
+
+**Type:** bool
+
+**Current value:** True
 
 ---
 
@@ -2328,7 +2392,7 @@ Income Support applicable amount for couples in which one is under 18 and one ov
 
 **Type:** float
 
-**Current value:** 102.57477522477521
+**Current value:** 103.24325674325674
 
 ---
 
@@ -2339,7 +2403,7 @@ Income Support applicable amount for single persons aged 18-24
 
 **Type:** float
 
-**Current value:** 81.25964035964034
+**Current value:** 81.78921078921078
 
 ---
 
@@ -2350,7 +2414,7 @@ Income Support applicable amount for couples both aged under 18
 
 **Type:** float
 
-**Current value:** 81.25964035964034
+**Current value:** 81.78921078921078
 
 ---
 
@@ -2361,7 +2425,7 @@ Income Support applicable amount for lone parents aged over 18
 
 **Type:** float
 
-**Current value:** 102.57477522477521
+**Current value:** 103.24325674325674
 
 ---
 
@@ -2372,7 +2436,7 @@ Income Support applicable amount for couples aged over 18
 
 **Type:** float
 
-**Current value:** 161.1396603396603
+**Current value:** 162.1898101898102
 
 ---
 
@@ -2383,7 +2447,7 @@ Income Support applicable amount for lone parents aged under 18
 
 **Type:** float
 
-**Current value:** 81.25964035964034
+**Current value:** 81.78921078921078
 
 ---
 
@@ -2394,7 +2458,7 @@ Income Support applicable amount for single persons aged over 25
 
 **Type:** float
 
-**Current value:** 102.57477522477521
+**Current value:** 103.24325674325674
 
 ---
 
@@ -2522,7 +2586,7 @@ Addition to the Minimum Guarantee for each severely disabled adult.
 
 **Type:** float
 
-**Current value:** 76.91926163723917
+**Current value:** 77.42054574638847
 
 ---
 
@@ -2544,7 +2608,7 @@ Addition to the Minimum Guarantee for each severely disabled child (above the ch
 
 **Type:** float
 
-**Current value:** 105.82494382022473
+**Current value:** 106.51460674157306
 
 ---
 
@@ -2555,7 +2619,7 @@ Addition to the Minimum Guarantee for each disabled child (above the child addit
 
 **Type:** float
 
-**Current value:** 33.89324237560192
+**Current value:** 34.11412520064206
 
 ---
 
@@ -2566,7 +2630,7 @@ Addition to the Minimum Guarantee for each child.
 
 **Type:** float
 
-**Current value:** 62.45533707865169
+**Current value:** 62.86235955056181
 
 ---
 
@@ -2578,28 +2642,6 @@ Share of eligible Pension Credit recipients that participate.
 **Type:** float
 
 **Current value:** 0.7
-
----
-
-### gov.obr.inflation.food_beverages_and_tobacco
-**Label:** Food and beverages inflation
-
-OBR CPI category inflation projection for food, beverages and tobacco.
-
-**Type:** float
-
-**Current value:** 1.352
-
----
-
-### gov.obr.inflation.utilities
-**Label:** Utilities inflation
-
-OBR CPI category inflation projection for utilities
-
-**Type:** float
-
-**Current value:** 1.365
 
 ---
 
@@ -2680,6 +2722,138 @@ Percentage of households which own a TV.
 
 ---
 
+### gov.dfe.extended_childcare_entitlement.minimum_weekly_hours
+**Label:** Extended childcare entitlement weekly work hours minimum
+
+The Department for Education limits extended childcare entitlement to benefit units in which each spouse earns at least the product of their minimum wage and this number of hours per week.
+
+**Type:** int
+
+**Current value:** 16
+
+---
+
+### gov.dfe.extended_childcare_entitlement.income.limit
+**Label:** Extended childcare entitlement individual income limit
+
+The Department for Education limits extended childcare entitlement eligibility to households where each parent's individual income is less than this amount.
+
+**Type:** int
+
+**Current value:** 100000
+
+---
+
+### gov.dfe.weeks_per_year
+**Label:** childcare entitlement weeks per year
+
+The Department for Education provides targeted, extended, and universal childcare entitlement for these weeks per year.
+
+**Type:** int
+
+**Current value:** 38
+
+---
+
+### gov.dfe.targeted_childcare_entitlement.income_limit.tax_credits
+**Label:** income limit for tax credit recipients to access benefit-targeted free childcare
+
+The Department for Education qualifies recipients of the Working Tax Credit or Child Tax Credit for targeted childcare entitlement if their income does not exceed this threshold.
+
+**Type:** int
+
+**Current value:** 16190
+
+---
+
+### gov.dfe.targeted_childcare_entitlement.income_limit.universal_credit
+**Label:** income limit for universal credit recipients to access benefit-targeted free childcare
+
+The Department for Education qualifies Universal Credit recipients for targeted childcare entitlement if their income does not exceed this threshold.
+
+**Type:** int
+
+**Current value:** 15400
+
+---
+
+### gov.dfe.targeted_childcare_entitlement.hours_entitlement
+**Label:** targeted childcare entitlement hours
+
+The Department for Education provides this number of hours of free childcare under the targeted childcare entitlement.
+
+**Type:** int
+
+**Current value:** 570
+
+---
+
+### gov.dfe.care_to_learn.amount.in_london
+**Label:** maximum weekly amount per child in London
+
+The Department for Education provides this amount of financial support through the Care to Learn scheme for those living in London.
+
+**Type:** int
+
+**Current value:** 195
+
+---
+
+### gov.dfe.care_to_learn.amount.outside_london
+**Label:** maximum weekly amount per child outside London
+
+The Department for Education provides this amount of financial support through the Care to Learn scheme for those living outside London.
+
+**Type:** int
+
+**Current value:** 180
+
+---
+
+### gov.dfe.care_to_learn.age_limit
+**Label:** maximum age to be eligible for the Care to Learn scheme
+
+The Department for Education limits Care to Learn eligibility to carers younger than this age.
+
+**Type:** int
+
+**Current value:** 20
+
+---
+
+### gov.dfe.universal_childcare_entitlement.min_age
+**Label:** universal childcare entitlement child's minimum age
+
+The Department for Education limits universal childcare entitlement in England to children this age or older.
+
+**Type:** int
+
+**Current value:** 3
+
+---
+
+### gov.dfe.universal_childcare_entitlement.max_age
+**Label:** universal childcare entitlement child's maximum age
+
+The Department for Education limits universal childcare entitlement in England to children younger than this age.
+
+**Type:** int
+
+**Current value:** 5
+
+---
+
+### gov.dfe.universal_childcare_entitlement.hours
+**Label:** universal childcare entitlement hours
+
+The Department for Education provides this number of hours per year of childcare for universal childcare entitlement in England.
+
+**Type:** int
+
+**Current value:** 570
+
+---
+
 ### gov.hmrc.fuel_duty.petrol_and_diesel
 **Label:** Fuel duty rate (petrol and diesel)
 
@@ -2731,7 +2905,7 @@ The Lower Profits Limit is the threshold at which self-employed earners pay the 
 
 **Type:** float
 
-**Current value:** 12887.282850779511
+**Current value:** 12971.269487750556
 
 ---
 
@@ -2753,7 +2927,7 @@ Small profits National Insurance threshold for self-employed earners
 
 **Type:** float
 
-**Current value:** 7453.631621187801
+**Current value:** 7502.2070626003215
 
 ---
 
@@ -3153,7 +3327,7 @@ Income after which the Child Benefit phases out
 ---
 
 ### gov.hmrc.tax_free_childcare.minimum_weekly_hours
-**Label:** Tax-free childcare weekly work hours minimum
+**Label:** tax-free childcare weekly work hours minimum
 
 HMRC limits tax-free childcare to benefit units in which each spouse earns at least the product of their minimum wage and this number of hours per week.
 
@@ -3164,7 +3338,7 @@ HMRC limits tax-free childcare to benefit units in which each spouse earns at le
 ---
 
 ### gov.hmrc.tax_free_childcare.income.income_limit
-**Label:** Tax-free childcare maximum adjusted income threshold
+**Label:** tax-free childcare maximum adjusted income threshold
 
 HMRC limits tax-free childcare eligibility to households where individual adjusted income does not exceed this yearly threshold.
 
@@ -3175,7 +3349,7 @@ HMRC limits tax-free childcare eligibility to households where individual adjust
 ---
 
 ### gov.hmrc.tax_free_childcare.age.disability
-**Label:** Tax-free childcare disability age limit
+**Label:** tax-free childcare disability age limit
 
 HMRC extends the tax-free childcare program eligibility to children with disabilities up to this age threshold.
 
@@ -3186,7 +3360,7 @@ HMRC extends the tax-free childcare program eligibility to children with disabil
 ---
 
 ### gov.hmrc.tax_free_childcare.age.standard
-**Label:** Tax-free childcare standard age limit
+**Label:** tax-free childcare standard age limit
 
 HMRC extends the tax-free childcare program eligibility to children up to this age threshold.
 
@@ -3197,7 +3371,7 @@ HMRC extends the tax-free childcare program eligibility to children up to this a
 ---
 
 ### gov.hmrc.tax_free_childcare.contribution.standard_child
-**Label:** Tax-free childcare standard yearly limit
+**Label:** tax-free childcare standard yearly limit
 
 HMRC provides tax-free childcare contribution up to this yearly amount for households with children under standard eligibility.
 
@@ -3207,8 +3381,19 @@ HMRC provides tax-free childcare contribution up to this yearly amount for house
 
 ---
 
+### gov.hmrc.tax_free_childcare.contribution.rate
+**Label:** tax-free childcare contribution rate
+
+The government contribution to childcare expenses (as a percentage of total household and government contributions) is this percentage.
+
+**Type:** float
+
+**Current value:** 0.2
+
+---
+
 ### gov.hmrc.tax_free_childcare.contribution.disabled_child
-**Label:** Tax-free childcare disabled child yearly limit
+**Label:** tax-free childcare disabled child yearly limit
 
 HMRC provides tax-free childcare contribution up to this yearly amount for households with disabled children.
 
@@ -3258,7 +3443,7 @@ Annual Exempt Amount for individuals. This parameter is under active development
 
 **Type:** float
 
-**Current value:** 3075.723830734966
+**Current value:** 3095.7683741648116
 
 ---
 
@@ -3383,47 +3568,25 @@ Council Tax rebate paid to households in qualifying Council Tax bands under the 
 
 ---
 
-### calibration.uprating.equity_prices
-**Label:** Equity prices
+### household.wealth.land.value.aggregate_household_land_value
+**Label:** Total direct household land value
 
-Equity prices (OBR forecast).
+Total value of land held by households
 
-**Type:** int
+**Type:** float
 
-**Current value:** 4291
-
----
-
-### calibration.programs.fuel_duty.revenue
-**Label:** Fuel duty revenues
-
-Fuel duty revenues.
-
-**Type:** int
-
-**Current value:** 26621382708
+**Current value:** 4157640417657.9434
 
 ---
 
-### calibration.programs.capital_gains.total
-**Label:** Total capital gains
+### household.wealth.land.value.aggregate_corporate_land_value
+**Label:** Total corporate land value
 
-Total capital gains by individuals.
+Total value of land held by (non-financial and financial) corporations
 
-**Type:** int
+**Type:** float
 
-**Current value:** 79881000000
-
----
-
-### calibration.programs.capital_gains.tax
-**Label:** Capital Gains Tax revenue
-
-Capital gains tax revenue.
-
-**Type:** int
-
-**Current value:** 16200000000
+**Current value:** 1696017895849.8547
 
 ---
 
@@ -3435,6 +3598,37 @@ Financial assets of households.
 **Type:** int
 
 **Current value:** 7300000000000
+
+---
+
+### household.wealth.national_balance_sheet.household.financial_net_worth
+**Label:** Total financial wealth
+
+**Type:** int
+
+**Current value:** 5327153000000
+
+---
+
+### household.wealth.corporate_wealth
+**Label:** Corporate wealth
+
+Total corporate wealth.
+
+**Type:** float
+
+**Current value:** 5204783930665.972
+
+---
+
+### household.wealth.property_wealth
+**Label:** Property wealth
+
+Total property wealth.
+
+**Type:** float
+
+**Current value:** 6180888974325.558
 
 ---
 
@@ -3467,7 +3661,7 @@ Absolute poverty threshold for equivalised household net income, before housing 
 
 **Type:** float
 
-**Current value:** 367.36108108108107
+**Current value:** 388.27333333333337
 
 ---
 
@@ -3478,7 +3672,18 @@ Absolute poverty threshold for equivalised household net income, after housing c
 
 **Type:** float
 
-**Current value:** 314.75567567567566
+**Current value:** 332.67333333333335
+
+---
+
+### household.poverty.exclude_non_hbai_income
+**Label:** Follow HBAI for poverty definitions
+
+Whether to exclude non-HBAI income from poverty calculations
+
+**Type:** bool
+
+**Current value:** True
 
 ---
 
@@ -3489,7 +3694,7 @@ Index of private rental prices across the UK.
 
 **Type:** float
 
-**Current value:** 128.5577828397874
+**Current value:** 129.39559605163248
 
 ---
 
@@ -3509,7 +3714,7 @@ Retail Price Index (RPI) is a measure of inflation published by the Office for N
 
 **Type:** float
 
-**Current value:** 205.04825538233115
+**Current value:** 206.38455827765404
 
 ---
 
@@ -3518,7 +3723,7 @@ Retail Price Index (RPI) is a measure of inflation published by the Office for N
 
 **Type:** float
 
-**Current value:** 307.5723830734967
+**Current value:** 309.57683741648106
 
 ---
 
@@ -3683,7 +3888,7 @@ Mean annual private school fee
 
 **Type:** float
 
-**Current value:** 17210.75043630017
+**Current value:** 16956.661316211877
 
 ---
 
@@ -3705,7 +3910,7 @@ Most recent September CPIH index value, updated for each uprating occurrence (20
 
 **Type:** float
 
-**Current value:** 153.44444444444443
+**Current value:** 154.44444444444446
 
 ---
 
@@ -4313,6 +4518,28 @@ Remove all State Pension payments.
 
 ---
 
+### gov.contrib.two_child_limit.age_exemption.child_tax_credit
+**Label:** Child Tax Credit two-child limit age-based exemption
+
+Parents of children under this age are exempt from the two-child limit under the Child Tax Credit.
+
+**Type:** int
+
+**Current value:** 0
+
+---
+
+### gov.contrib.two_child_limit.age_exemption.universal_credit
+**Label:** Universal Credit two-child limit age-based exemption
+
+Parents of children under this age are exempt from the two-child limit under the Universal Credit.
+
+**Type:** int
+
+**Current value:** 0
+
+---
+
 ### gov.dwp.carers_allowance.rate
 **Label:** Carer's Allowance rate
 
@@ -4624,7 +4851,7 @@ This amount of earnings is disreagrded for workers under the Housing Benefit.
 
 **Type:** float
 
-**Current value:** 51.18391608391608
+**Current value:** 51.51748251748252
 
 ---
 
@@ -4635,7 +4862,7 @@ This amount of earnings is disreagrded for couples under the Housing Benefit.
 
 **Type:** float
 
-**Current value:** 13.796203796203795
+**Current value:** 13.886113886113886
 
 ---
 
@@ -4646,7 +4873,7 @@ This amount of earnings is disreagrded for lone parents under the Housing Benefi
 
 **Type:** float
 
-**Current value:** 34.49050949050949
+**Current value:** 34.71528471528472
 
 ---
 
@@ -4657,7 +4884,7 @@ This amount of earnings is disreagrded for single filers under the Housing Benef
 
 **Type:** float
 
-**Current value:** 6.898101898101897
+**Current value:** 6.943056943056943
 
 ---
 
@@ -4690,7 +4917,7 @@ Exceptional rate for Constant Attendance Allowance
 
 **Type:** float
 
-**Current value:** 200.87272727272725
+**Current value:** 202.1818181818182
 
 ---
 
@@ -4701,7 +4928,7 @@ Full day rate for Constant Attendance Allowance
 
 **Type:** float
 
-**Current value:** 100.43636363636362
+**Current value:** 101.0909090909091
 
 ---
 
@@ -4712,7 +4939,7 @@ Part day rate for Constant Attendance Allowance
 
 **Type:** float
 
-**Current value:** 50.21818181818181
+**Current value:** 50.54545454545455
 
 ---
 
@@ -4723,7 +4950,7 @@ Intermediate rate for Constant Attendance Allowance
 
 **Type:** float
 
-**Current value:** 150.65454545454543
+**Current value:** 151.63636363636365
 
 ---
 
@@ -4734,7 +4961,7 @@ Disability premium for a single person
 
 **Type:** float
 
-**Current value:** 48.217732267732266
+**Current value:** 48.531968031968034
 
 ---
 
@@ -4745,7 +4972,7 @@ Severe disability premium for a couple where both are eligible
 
 **Type:** float
 
-**Current value:** 184.73116883116882
+**Current value:** 185.93506493506496
 
 ---
 
@@ -4756,7 +4983,7 @@ Enhanced disability premium for a couple, invalid for Employment and Support All
 
 **Type:** float
 
-**Current value:** 33.80069930069929
+**Current value:** 34.02097902097902
 
 ---
 
@@ -4767,7 +4994,7 @@ Disability premium for a couple
 
 **Type:** float
 
-**Current value:** 68.7050949050949
+**Current value:** 69.15284715284716
 
 ---
 
@@ -4778,7 +5005,7 @@ Severe disability premium for a single person
 
 **Type:** float
 
-**Current value:** 92.36558441558441
+**Current value:** 92.96753246753248
 
 ---
 
@@ -4789,7 +5016,7 @@ Enhanced disability premium for a single person, invalid for Employment and Supp
 
 **Type:** float
 
-**Current value:** 23.591508491508492
+**Current value:** 23.745254745254748
 
 ---
 
@@ -4811,7 +5038,7 @@ Weekly contributory Jobseeker's Allowance for couples
 
 **Type:** float
 
-**Current value:** 134.1653691813804
+**Current value:** 135.03972712680581
 
 ---
 
@@ -4833,7 +5060,7 @@ Income-based Jobseeker's Allowance for persons aged 18-24
 
 **Type:** float
 
-**Current value:** 67.66456661316212
+**Current value:** 68.10553772070627
 
 ---
 
@@ -4855,7 +5082,7 @@ Income-based Jobseeker's Allowance for persons aged over 25
 
 **Type:** float
 
-**Current value:** 85.34269662921349
+**Current value:** 85.8988764044944
 
 ---
 
@@ -5031,7 +5258,7 @@ Non-dependent deduction amount for the housing element of the Universal Credit.
 
 **Type:** float
 
-**Current value:** 93.77881959910913
+**Current value:** 94.3899777282851
 
 ---
 
@@ -5196,7 +5423,7 @@ Child Tax Credit severely disabled child element
 
 **Type:** float
 
-**Current value:** 1584.935794542536
+**Current value:** 1595.2648475120388
 
 ---
 
@@ -5262,7 +5489,7 @@ Working Tax Credit childcare element for one child
 
 **Type:** float
 
-**Current value:** 268.52777777777777
+**Current value:** 270.27777777777777
 
 ---
 
@@ -5295,7 +5522,7 @@ Working Tax Credit childcare element for two or more children
 
 **Type:** float
 
-**Current value:** 460.33333333333326
+**Current value:** 463.33333333333337
 
 ---
 
@@ -5373,6 +5600,28 @@ Weekly amount paid to recipients of the New State Pension.
 **Type:** float
 
 **Current value:** 221.2
+
+---
+
+### gov.dwp.state_pension.triple_lock.minimum_rate
+**Label:** Triple lock minimum rate
+
+The triple lock is set to the highest of earnings growth, CPI inflation, or this rate.
+
+**Type:** float
+
+**Current value:** 0.025
+
+---
+
+### gov.dwp.state_pension.triple_lock.active
+**Label:** Triple lock active
+
+The triple lock is active if this value is true.
+
+**Type:** bool
+
+**Current value:** True
 
 ---
 
@@ -5705,7 +5954,7 @@ Income Support applicable amount for couples in which one is under 18 and one ov
 
 **Type:** float
 
-**Current value:** 102.57477522477521
+**Current value:** 103.24325674325674
 
 ---
 
@@ -5716,7 +5965,7 @@ Income Support applicable amount for single persons aged 18-24
 
 **Type:** float
 
-**Current value:** 81.25964035964034
+**Current value:** 81.78921078921078
 
 ---
 
@@ -5727,7 +5976,7 @@ Income Support applicable amount for couples both aged under 18
 
 **Type:** float
 
-**Current value:** 81.25964035964034
+**Current value:** 81.78921078921078
 
 ---
 
@@ -5738,7 +5987,7 @@ Income Support applicable amount for lone parents aged over 18
 
 **Type:** float
 
-**Current value:** 102.57477522477521
+**Current value:** 103.24325674325674
 
 ---
 
@@ -5749,7 +5998,7 @@ Income Support applicable amount for couples aged over 18
 
 **Type:** float
 
-**Current value:** 161.1396603396603
+**Current value:** 162.1898101898102
 
 ---
 
@@ -5760,7 +6009,7 @@ Income Support applicable amount for lone parents aged under 18
 
 **Type:** float
 
-**Current value:** 81.25964035964034
+**Current value:** 81.78921078921078
 
 ---
 
@@ -5771,7 +6020,7 @@ Income Support applicable amount for single persons aged over 25
 
 **Type:** float
 
-**Current value:** 102.57477522477521
+**Current value:** 103.24325674325674
 
 ---
 
@@ -5899,7 +6148,7 @@ Addition to the Minimum Guarantee for each severely disabled adult.
 
 **Type:** float
 
-**Current value:** 76.91926163723917
+**Current value:** 77.42054574638847
 
 ---
 
@@ -5921,7 +6170,7 @@ Addition to the Minimum Guarantee for each severely disabled child (above the ch
 
 **Type:** float
 
-**Current value:** 105.82494382022473
+**Current value:** 106.51460674157306
 
 ---
 
@@ -5932,7 +6181,7 @@ Addition to the Minimum Guarantee for each disabled child (above the child addit
 
 **Type:** float
 
-**Current value:** 33.89324237560192
+**Current value:** 34.11412520064206
 
 ---
 
@@ -5943,7 +6192,7 @@ Addition to the Minimum Guarantee for each child.
 
 **Type:** float
 
-**Current value:** 62.45533707865169
+**Current value:** 62.86235955056181
 
 ---
 
@@ -5955,28 +6204,6 @@ Share of eligible Pension Credit recipients that participate.
 **Type:** float
 
 **Current value:** 0.7
-
----
-
-### gov.obr.inflation.food_beverages_and_tobacco
-**Label:** Food and beverages inflation
-
-OBR CPI category inflation projection for food, beverages and tobacco.
-
-**Type:** float
-
-**Current value:** 1.352
-
----
-
-### gov.obr.inflation.utilities
-**Label:** Utilities inflation
-
-OBR CPI category inflation projection for utilities
-
-**Type:** float
-
-**Current value:** 1.365
 
 ---
 
@@ -6057,6 +6284,138 @@ Percentage of households which own a TV.
 
 ---
 
+### gov.dfe.extended_childcare_entitlement.minimum_weekly_hours
+**Label:** Extended childcare entitlement weekly work hours minimum
+
+The Department for Education limits extended childcare entitlement to benefit units in which each spouse earns at least the product of their minimum wage and this number of hours per week.
+
+**Type:** int
+
+**Current value:** 16
+
+---
+
+### gov.dfe.extended_childcare_entitlement.income.limit
+**Label:** Extended childcare entitlement individual income limit
+
+The Department for Education limits extended childcare entitlement eligibility to households where each parent's individual income is less than this amount.
+
+**Type:** int
+
+**Current value:** 100000
+
+---
+
+### gov.dfe.weeks_per_year
+**Label:** childcare entitlement weeks per year
+
+The Department for Education provides targeted, extended, and universal childcare entitlement for these weeks per year.
+
+**Type:** int
+
+**Current value:** 38
+
+---
+
+### gov.dfe.targeted_childcare_entitlement.income_limit.tax_credits
+**Label:** income limit for tax credit recipients to access benefit-targeted free childcare
+
+The Department for Education qualifies recipients of the Working Tax Credit or Child Tax Credit for targeted childcare entitlement if their income does not exceed this threshold.
+
+**Type:** int
+
+**Current value:** 16190
+
+---
+
+### gov.dfe.targeted_childcare_entitlement.income_limit.universal_credit
+**Label:** income limit for universal credit recipients to access benefit-targeted free childcare
+
+The Department for Education qualifies Universal Credit recipients for targeted childcare entitlement if their income does not exceed this threshold.
+
+**Type:** int
+
+**Current value:** 15400
+
+---
+
+### gov.dfe.targeted_childcare_entitlement.hours_entitlement
+**Label:** targeted childcare entitlement hours
+
+The Department for Education provides this number of hours of free childcare under the targeted childcare entitlement.
+
+**Type:** int
+
+**Current value:** 570
+
+---
+
+### gov.dfe.care_to_learn.amount.in_london
+**Label:** maximum weekly amount per child in London
+
+The Department for Education provides this amount of financial support through the Care to Learn scheme for those living in London.
+
+**Type:** int
+
+**Current value:** 195
+
+---
+
+### gov.dfe.care_to_learn.amount.outside_london
+**Label:** maximum weekly amount per child outside London
+
+The Department for Education provides this amount of financial support through the Care to Learn scheme for those living outside London.
+
+**Type:** int
+
+**Current value:** 180
+
+---
+
+### gov.dfe.care_to_learn.age_limit
+**Label:** maximum age to be eligible for the Care to Learn scheme
+
+The Department for Education limits Care to Learn eligibility to carers younger than this age.
+
+**Type:** int
+
+**Current value:** 20
+
+---
+
+### gov.dfe.universal_childcare_entitlement.min_age
+**Label:** universal childcare entitlement child's minimum age
+
+The Department for Education limits universal childcare entitlement in England to children this age or older.
+
+**Type:** int
+
+**Current value:** 3
+
+---
+
+### gov.dfe.universal_childcare_entitlement.max_age
+**Label:** universal childcare entitlement child's maximum age
+
+The Department for Education limits universal childcare entitlement in England to children younger than this age.
+
+**Type:** int
+
+**Current value:** 5
+
+---
+
+### gov.dfe.universal_childcare_entitlement.hours
+**Label:** universal childcare entitlement hours
+
+The Department for Education provides this number of hours per year of childcare for universal childcare entitlement in England.
+
+**Type:** int
+
+**Current value:** 570
+
+---
+
 ### gov.hmrc.fuel_duty.petrol_and_diesel
 **Label:** Fuel duty rate (petrol and diesel)
 
@@ -6108,7 +6467,7 @@ The Lower Profits Limit is the threshold at which self-employed earners pay the 
 
 **Type:** float
 
-**Current value:** 12887.282850779511
+**Current value:** 12971.269487750556
 
 ---
 
@@ -6130,7 +6489,7 @@ Small profits National Insurance threshold for self-employed earners
 
 **Type:** float
 
-**Current value:** 7453.631621187801
+**Current value:** 7502.2070626003215
 
 ---
 
@@ -6530,7 +6889,7 @@ Income after which the Child Benefit phases out
 ---
 
 ### gov.hmrc.tax_free_childcare.minimum_weekly_hours
-**Label:** Tax-free childcare weekly work hours minimum
+**Label:** tax-free childcare weekly work hours minimum
 
 HMRC limits tax-free childcare to benefit units in which each spouse earns at least the product of their minimum wage and this number of hours per week.
 
@@ -6541,7 +6900,7 @@ HMRC limits tax-free childcare to benefit units in which each spouse earns at le
 ---
 
 ### gov.hmrc.tax_free_childcare.income.income_limit
-**Label:** Tax-free childcare maximum adjusted income threshold
+**Label:** tax-free childcare maximum adjusted income threshold
 
 HMRC limits tax-free childcare eligibility to households where individual adjusted income does not exceed this yearly threshold.
 
@@ -6552,7 +6911,7 @@ HMRC limits tax-free childcare eligibility to households where individual adjust
 ---
 
 ### gov.hmrc.tax_free_childcare.age.disability
-**Label:** Tax-free childcare disability age limit
+**Label:** tax-free childcare disability age limit
 
 HMRC extends the tax-free childcare program eligibility to children with disabilities up to this age threshold.
 
@@ -6563,7 +6922,7 @@ HMRC extends the tax-free childcare program eligibility to children with disabil
 ---
 
 ### gov.hmrc.tax_free_childcare.age.standard
-**Label:** Tax-free childcare standard age limit
+**Label:** tax-free childcare standard age limit
 
 HMRC extends the tax-free childcare program eligibility to children up to this age threshold.
 
@@ -6574,7 +6933,7 @@ HMRC extends the tax-free childcare program eligibility to children up to this a
 ---
 
 ### gov.hmrc.tax_free_childcare.contribution.standard_child
-**Label:** Tax-free childcare standard yearly limit
+**Label:** tax-free childcare standard yearly limit
 
 HMRC provides tax-free childcare contribution up to this yearly amount for households with children under standard eligibility.
 
@@ -6584,8 +6943,19 @@ HMRC provides tax-free childcare contribution up to this yearly amount for house
 
 ---
 
+### gov.hmrc.tax_free_childcare.contribution.rate
+**Label:** tax-free childcare contribution rate
+
+The government contribution to childcare expenses (as a percentage of total household and government contributions) is this percentage.
+
+**Type:** float
+
+**Current value:** 0.2
+
+---
+
 ### gov.hmrc.tax_free_childcare.contribution.disabled_child
-**Label:** Tax-free childcare disabled child yearly limit
+**Label:** tax-free childcare disabled child yearly limit
 
 HMRC provides tax-free childcare contribution up to this yearly amount for households with disabled children.
 
@@ -6635,7 +7005,7 @@ Annual Exempt Amount for individuals. This parameter is under active development
 
 **Type:** float
 
-**Current value:** 3075.723830734966
+**Current value:** 3095.7683741648116
 
 ---
 
